@@ -1371,7 +1371,12 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_basics.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Graph.cpp">
+      <Filter>NewProject\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>NewProject\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\MainComponent.h">
@@ -2640,7 +2645,12 @@
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
-    <ClInclude Include="Source.h" />
+    <ClInclude Include="Graph.h">
+      <Filter>NewProject\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source.h">
+      <Filter>NewProject\Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\JUCE\modules\juce_core\native\java\README.txt">

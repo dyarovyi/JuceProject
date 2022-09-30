@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -1281,6 +1281,7 @@
       <AdditionalOptions> /bigobj %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Graph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\MainComponent.h" />
@@ -1705,6 +1706,7 @@
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_gui_basics\windows\juce_TopLevelWindow.h" />
     <ClInclude Include="..\..\..\..\JUCE\modules\juce_gui_basics\juce_gui_basics.h" />
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="Source.h" />
   </ItemGroup>
   <ItemGroup>

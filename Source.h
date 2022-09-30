@@ -5,6 +5,8 @@
 
 #include <JuceHeader.h>
 
+#include "Graph.h"
+
 class Interpolator {
 public:
     std::vector<std::pair<double, double>> data;

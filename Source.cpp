@@ -43,8 +43,8 @@ double LinearInterpolator::f(double x) {
 /* For chosen number of intervals function finds values for each interval */
 void LinearInterpolator::interpolate(int intervals) {
     std::vector<std::pair<double, double>> result;
+    double step = (data[1].first - data[0].first) / intervals;
     for (auto iter = data.begin(); iter != data.end() - 1; iter++) {
-        double step = ((iter + 1)->first - iter->first) / intervals;
         for (double x = iter->first; x != (iter + 1)->first; x += step) {
             double y = f(x);
             result.push_back(std::pair<double, double>(x, y));
@@ -62,10 +62,10 @@ void LinearInterpolator::draw(juce::Graphics& g) {
     /* LINEAR INTERPOLATION */
     /* -------------------- */
 
-    std::vector<juce::Line<float>> lines_linear;
+    /*std::vector<juce::Line<float>> lines_linear;
     for (auto iter = data.begin(); iter != data.end() - 1; iter++) {
-        juce::Point<float> a(iter->first, iter->second);
-        juce::Point<float> b((iter + 1)->first, (iter + 1)->second);
+        juce::Point<float> a(iter->first * 50, iter->second * 50 + 50);
+        juce::Point<float> b((iter + 1)->first * 50, (iter + 1)->second * 50 + 50);
         lines_linear.push_back(juce::Line<float>(a, b));
         g.drawRoundedRectangle(a.getX(), a.getY(), 5, 5, 5, 5);
         g.drawRoundedRectangle(b.getX(), b.getY(), 5, 5, 5, 5);
@@ -73,7 +73,7 @@ void LinearInterpolator::draw(juce::Graphics& g) {
 
     for (auto iter = lines_linear.begin(); iter != lines_linear.end(); iter++) {
         g.drawLine(*iter, 2.0f);
-    }
+    }*/
 }
 
 /* ---------- */
@@ -133,11 +133,10 @@ void HermiteInterpolator::draw(juce::Graphics& g) {
     /* HERMITE INTERPOLATION */
     /* --------------------- */
 
-    int i = 0;
-    std::vector<juce::Line<float>> lines_hermite;
+    /*std::vector<juce::Line<float>> lines_hermite;
     for (auto iter = data.begin(); iter != data.end() - 1; iter++) {
-        juce::Point<float> a(iter->first * 100 + 200, iter->second * 100);
-        juce::Point<float> b((iter + 1)->first * 100 + 200, (iter + 1)->second * 100);
+        juce::Point<float> a(iter->first * 50 + 300, iter->second * 50 + 50);
+        juce::Point<float> b((iter + 1)->first * 50 + 300, (iter + 1)->second * 50 + 50);
         lines_hermite.push_back(juce::Line<float>(a, b));
         g.drawRoundedRectangle(a.getX(), a.getY(), 5, 5, 5, 5);
         g.drawRoundedRectangle(b.getX(), b.getY(), 5, 5, 5, 5);
@@ -145,5 +144,5 @@ void HermiteInterpolator::draw(juce::Graphics& g) {
 
     for (auto iter = lines_hermite.begin(); iter != lines_hermite.end(); iter++) {
         g.drawLine(*iter, 2.0f);
-    }
+    }*/
 }
